@@ -1,0 +1,56 @@
+service: pc-serverless
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.7
+  lambdaHashingVersion: 20201221
+  versionFunctions: false
+  stage: ${opt:stage, 'test'}
+  region: eu-central-1
+  # you can define service wide environment variables here
+  environment:
+    model_name: best_latest.pkl
+    endpoint: /amsterdam/predict
+    bucket: pycaret-serverless
+  httpApi:
+    cors: true
+  ecr:
+    images:
+      pycaretimage:
+        path: ./
+        file: Dockerfile
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:*
+          Resource: "arn:aws:s3:::*"
+
+package:
+  exclude:
+    - .serverless/**
+    - .aws-sam/**
+    - data/**
+    - venv/**
+    - LICENSE
+    - README.md
+    - results/**
+    - model/**
+    - node_modules/**
+    - cache/**
+
+functions:
+  pycaret-amsterdam:
+    timeout: 60
+    memorySize: 512
+    image:
+      name: pycaretimage
+    events:
+      - httpApi:
+          method: POST
+          path: ${self:provider.environment.endpoint}
+    environemnt:
+      model_name: ${self:provider.environment.model_name}
+      bucket: ${self:provider.environment.bucket}

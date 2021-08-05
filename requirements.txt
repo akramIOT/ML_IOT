@@ -1,0 +1,6 @@
+requests~=2.26.0
+aws-lambda-powertools~=1.18.1
+pycaret
+pydantic[email]
+boto3
+joblib
