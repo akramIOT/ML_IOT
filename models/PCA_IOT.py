@@ -50,6 +50,8 @@ if __name__ == "__main__":
     #X = data.data
     #y = data.target
 
+    ## This below sample  IOT  dataset used is  ~ 3.4 Gb and it can be downloaded from https://data.world/cityofchicago/sustainable-green-infrastructure-monitoring-sensors
+    
     data = pd.read_csv("Smart_Green_Infrastructure_Monitoring_Sensors_-_Historical.csv", delimiter=None, header='infer', dtype='unicode', low_memory=False)
     ## High number of Samples/rows  in this IOT  dataset as per  shape  output below.
     print(data.shape)
