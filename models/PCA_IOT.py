@@ -1,5 +1,6 @@
 
 ## This is to do PCA  on a High dimension data with multiple  features  and  reduce the dimension by PCA method.
+## Number of  features(Y coordinates of the data) in the Input dataset correspond to the  number of  Dimensions. 
 
 # Imports
 import matplotlib.pyplot as plt
