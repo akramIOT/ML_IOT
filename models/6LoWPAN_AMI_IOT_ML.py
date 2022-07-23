@@ -4,7 +4,7 @@ Created on Tue Feb 25 16:20:39 2022
 If  each  house hold is having an  Energy utility meter connected  over 6LOWPAN or other  Wireless 802.15.4 based /WISUN
 based  utility network then by using the  "raw_data" which comes from the household power consumption how to do applied
 AI/ML based analysis  to derive data insights is the focus of this ML project with IOT data.
-@author: isheriff
+@author: Akram Sheriff
 """
 import numpy as np
 import pandas as pd
