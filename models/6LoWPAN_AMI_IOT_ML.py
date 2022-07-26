@@ -14,7 +14,7 @@ import seaborn
 import seaborn as sns
 from scipy.special import factorial
 
-power = pd.read_csv('C:/Users/isheriff/.spyder-py3/AKRAM_CODE_FOLDER/ML/household_power_consumption.csv', parse_dates=['Date_Time'])
+power = pd.read_csv('C:/Users/sheriff/.spyder-py3/AKRAM_CODE_FOLDER/ML/household_power_consumption.csv', parse_dates=['Date_Time'])
 power = power.set_index('Date_Time')
 power.head()
 
