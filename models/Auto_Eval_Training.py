@@ -44,6 +44,8 @@ best_pipeline_auc.score(X_test, y_test,  objectives=["auc"])
 ## Pickling the trained model
 best_pipeline.save("AutomML_Eval_model.pkl")
 
+## Loading the Previously trained and  saved model
+
 check_model=automl.load('model.pkl')
 check_model.predict_proba(X_test).to_dataframe()
 
