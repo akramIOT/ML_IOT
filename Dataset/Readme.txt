@@ -1,3 +1,5 @@
+This readme corresponds  to  Wireless_Sensor_Data_Mining_IOT_Dataset_WISDM
+
 Readme file for WISDM's activity prediction input dataset v1.1
 Updated: Dec. 2, 2012
 
