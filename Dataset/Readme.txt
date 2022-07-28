@@ -1,4 +1,4 @@
-Readme file for WISDM's activity prediction dataset v1.1
+Readme file for WISDM's activity prediction input dataset v1.1
 Updated: Dec. 2, 2012
 
 This data has been released by the Wireless Sensor Data Mining
